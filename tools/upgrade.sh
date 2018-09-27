@@ -22,6 +22,7 @@ fi
 
 printf "${BLUE}%s${NORMAL}\n" "Updating Oh My Zsh"
 cd "$ZSH"
+git pull
 if git pull --rebase --stat upstream master
 then
   git push 
