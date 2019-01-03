@@ -94,6 +94,11 @@ if [[ -v TEDZSH_ENABLE_CUSTOM_BIN ]]; then
     export PATH=${PATH}:${HOME}/.local/bin:${HOME}/bin
 fi
 
+if [[ -v TEDZSH_ENABLE_LOCAL_TMPDIR ]]; then
+    mkdir -p $HOME/.local/tmp
+    export TMPDIR=$HOME/.local/tmp
+fi
+
 if [[ -v TEDZSH_ENABLE_ZSHENV ]]; then
     source .zshenv
 fi
